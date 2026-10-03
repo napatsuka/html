@@ -1,0 +1,60 @@
+  <section class="block reserve-sec" id="reserve">
+    <div class="wrap reserve">
+      <div>
+        <a class="tel" href="tel:+81300000000" data-in style="margin-top:0"><small>お電話（15:00〜17:00）</small><b>03-0000-0000</b></a>
+        <ul class="rules" data-in>
+          <li>小学生以上のお子さまからお迎えしています。</li>
+          <li>香水など香りの強いものは、お控えください。</li>
+          <li>前日のお取り消しは50%、当日は100%を頂戴します。</li>
+        </ul>
+      </div>
+      <div>
+        <form class="rform" id="reserve-form" novalidate data-in>
+          <fieldset class="seg">
+            <legend>お時間</legend>
+            <div class="opts">
+              <label><input type="radio" name="part" value="昼" data-times="12:00,13:15" data-price="16500"><b>昼　十二貫</b><span>16,500円</span></label>
+              <label><input type="radio" name="part" value="夜" data-times="17:30,20:00" data-price="38500" checked><b>夜　十五貫</b><span>38,500円</span></label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="f-date">ご希望日</label>
+            <input id="f-date" name="date" type="date" required aria-describedby="date-err">
+            <p class="err" id="date-err"></p>
+          </div>
+          <div class="field">
+            <label for="f-time">開始時刻</label>
+            <select id="f-time" name="time"></select>
+          </div>
+          <div class="field">
+            <label for="f-party">人数</label>
+            <select id="f-party" name="party"><option value="1">1名</option><option value="2" selected>2名</option><option value="3">3名</option><option value="4">4名（個室もご案内可）</option><option value="5">5名（個室）</option><option value="6">6名（個室）</option></select>
+          </div>
+          <div class="field">
+            <label for="f-name">お名前</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="name-err">
+            <p class="err" id="name-err"></p>
+          </div>
+          <div class="field full">
+            <label for="f-email">メールアドレス</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="email-err">
+            <p class="err" id="email-err"></p>
+          </div>
+          <div class="field full">
+            <label for="f-notes">苦手な食材・アレルギー・ご要望</label>
+            <textarea id="f-notes" name="notes" rows="2"></textarea>
+          </div>
+          <div class="submit-row">
+            <button class="btn btn-solid" type="submit"><span>空席を問い合わせる</span></button>
+            <p class="form-note" id="form-status">このあとすぐには、ご予約は確定しません。</p>
+          </div>
+        </form>
+        <div class="done" id="reserve-done" hidden>
+          <h3 tabindex="-1">お問い合わせを承りました</h3>
+          <p>お席を確認し、翌営業日までにメールでお返事します。暖簾の前でお待ちしています。</p>
+          <dl></dl>
+          <button class="btn btn-light" type="button" data-reset><span>別の日で問い合わせる</span></button>
+        </div>
+      </div>
+    </div>
+  </section>

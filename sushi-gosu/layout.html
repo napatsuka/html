@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESC}}">
+<meta name="theme-color" content="#16244A">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESC}}">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%2316244A'/%3E%3Ccircle cx='20' cy='20' r='14' fill='none' stroke='%23F3F3EF' stroke-width='2'/%3E%3Cpath d='M11 25a9 9 0 0 1 18 0M15 25a5 5 0 0 1 10 0' fill='none' stroke='%23F3F3EF' stroke-width='1.6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&family=Noto+Serif+JP:wght@400;500;600&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v={{V}}">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "鮨 呉須",
+  "alternateName": "Sushi Gosu",
+  "servesCuisine": "江戸前鮨",
+  "foundingDate": "1962",
+  "priceRange": "¥16,500〜",
+  "telephone": "+81-3-0000-0000",
+  "acceptsReservations": true,
+  "address": { "@type": "PostalAddress", "streetAddress": "日本橋室町一丁目〇-〇", "addressLocality": "中央区", "addressRegion": "東京都", "addressCountry": "JP" }
+}
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="crest" viewBox="0 0 40 40">
+    <defs><clipPath id="crest-clip"><circle cx="20" cy="20" r="14.5"/></clipPath></defs>
+    <circle cx="20" cy="20" r="17.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <g clip-path="url(#crest-clip)" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 20a9 9 0 0 1 18 0z" style="fill:var(--crest-fill,#F3F3EF)"/><path d="M5 20a5 5 0 0 1 10 0"/><path d="M21 20a9 9 0 0 1 18 0z" style="fill:var(--crest-fill,#F3F3EF)"/><path d="M25 20a5 5 0 0 1 10 0"/><path d="M-9 27a9 9 0 0 1 18 0z" style="fill:var(--crest-fill,#F3F3EF)"/><path d="M-5 27a5 5 0 0 1 10 0"/><path d="M11 27a9 9 0 0 1 18 0z" style="fill:var(--crest-fill,#F3F3EF)"/><path d="M15 27a5 5 0 0 1 10 0"/><path d="M31 27a9 9 0 0 1 18 0z" style="fill:var(--crest-fill,#F3F3EF)"/><path d="M35 27a5 5 0 0 1 10 0"/><path d="M1 34a9 9 0 0 1 18 0z" style="fill:var(--crest-fill,#F3F3EF)"/><path d="M5 34a5 5 0 0 1 10 0"/><path d="M21 34a9 9 0 0 1 18 0z" style="fill:var(--crest-fill,#F3F3EF)"/><path d="M25 34a5 5 0 0 1 10 0"/></g>
+  </symbol>
+</svg>
+
+<a class="skip" href="#main">本文へ移動</a>
+
+<header class="site-head" id="head">
+  <div class="head-inner">
+    <a class="logo" href="index.html" aria-label="鮨 呉須 トップへ"><svg style="color:#16244A" aria-hidden="true"><use href="#crest"/></svg><span><b>呉須</b><small>SUSHI GOSU</small></span></a>
+    <nav class="gnav" id="gnav" aria-label="サイト内">
+      {{NAV}}
+    </nav>
+    <div class="head-right">
+      <a class="lang" href="#" lang="en">EN</a>
+      <a class="book" href="reserve.html"{{BOOK_CURRENT}}>ご予約</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="gnav">MENU</button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="page-{{SLUG}}">
+{{BODY}}
+</main>
+
+<footer>
+  <div class="f-top">
+    <svg aria-hidden="true" style="--crest-fill:#16244A"><use href="#crest"/></svg>
+    <div>
+      <b>鮨 呉須</b>
+      <address>東京都中央区日本橋室町一丁目〇-〇　03-0000-0000</address>
+    </div>
+    <nav aria-label="フッター">{{FNAV}}</nav>
+  </div>
+  <small>&copy; 2026 Sushi Gosu　写真：Unsplash より {{CREDITS}}</small>
+</footer>
+
+{{SCRIPTS}}<script src="js/main.js?v={{V}}"></script>
+</body>
+</html>

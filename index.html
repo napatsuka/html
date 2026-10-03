@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ホームページ制作</title>
+<meta name="description" content="これまでに作ったホームページ9サイトの一覧。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%2317181B'/%3E%3Crect x='9' y='11' width='22' height='4' fill='%23EFEFEC'/%3E%3Crect x='9' y='19' width='14' height='4' fill='%23EFEFEC'/%3E%3Crect x='9' y='27' width='18' height='4' fill='%23EFEFEC'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #EFEFEC; --ink: #17181B; --ink-2: #5D6066; --line: rgba(23,24,27,.14);
+  --font: 'Zen Kaku Gothic New', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+  --ease: cubic-bezier(.2, .7, .1, 1);
+  --pad: clamp(20px, 4vw, 56px);
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 15px/1.8 var(--font); letter-spacing: .03em; -webkit-font-smoothing: antialiased; overflow-x: clip; }
+img { display: block; width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.wrap { width: min(1440px, 100%); margin: 0 auto; padding: 0 var(--pad); }
+
+header { padding: clamp(56px, 9vw, 128px) 0 clamp(36px, 5vw, 64px); }
+.path { margin: 0 0 20px; font-size: 13px; color: var(--ink-2); }
+.path code { font: inherit; }
+h1 { margin: 0; font: 900 clamp(38px, 8vw, 128px)/1.05 var(--font); letter-spacing: 0; word-break: auto-phrase; }
+.intro { margin: 24px 0 0; max-width: 34em; font-size: 16px; color: var(--ink-2); }
+
+.filters { display: flex; flex-wrap: wrap; gap: 8px; padding: 18px 0; border-top: 1.5px solid var(--ink); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 5; background: var(--bg); }
+.filters button { display: inline-flex; align-items: baseline; gap: 8px; height: 40px; padding: 0 18px; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--ink); font: 500 14px/38px var(--font); letter-spacing: .06em; cursor: pointer; transition: background .25s, color .25s, border-color .25s; }
+.filters button small { font-size: 12px; color: var(--ink-2); }
+.filters button:hover { border-color: var(--ink); }
+.filters button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.filters button[aria-pressed="true"] small { color: rgba(239,239,236,.7); }
+
+.works { list-style: none; margin: 0; padding: clamp(36px, 4vw, 56px) 0 clamp(80px, 10vw, 140px); display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(44px, 5vw, 72px) clamp(20px, 2.4vw, 36px); }
+.work[hidden] { display: none; }
+.work a { display: block; height: 100%; }
+.pic { margin: 0; position: relative; overflow: hidden; background: var(--c); aspect-ratio: 16 / 10; box-shadow: 0 0 0 1px var(--line); }
+.pic img { height: 100%; object-fit: cover; object-position: top; transition: transform 1s var(--ease); }
+.pic::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: var(--c); transform: scaleY(0); transform-origin: bottom; transition: transform .45s var(--ease); }
+.noimg { position: absolute; inset: 0; display: grid; place-items: center; color: #fff; font: 700 24px/1.4 var(--font); }
+.work a:hover .pic img { transform: scale(1.035); }
+.work a:hover .pic::after, .work a:focus-visible .pic::after { transform: none; }
+.txt { padding-top: 20px; }
+.tag { display: flex; align-items: center; gap: 12px; margin: 0 0 8px; font-size: 13px; color: var(--ink-2); }
+.tag .no { font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; }
+.tag .no::after { content: ''; display: inline-block; width: 18px; height: 1px; background: var(--line); vertical-align: middle; margin-left: 12px; }
+.work h2 { margin: 0; font: 700 clamp(22px, 2vw, 28px)/1.4 var(--font); letter-spacing: .04em; }
+.sub { margin: 2px 0 10px; font-size: 14px; color: var(--ink-2); }
+.desc { margin: 0; font-size: 14px; color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; max-width: 34em; }
+.foot { display: flex; align-items: center; gap: 16px; margin: 16px 0 0; padding-top: 14px; border-top: 1px solid var(--line); font-size: 13px; color: var(--ink-2); }
+.foot code { font: inherit; }
+.go { margin-left: auto; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; color: var(--ink); transition: background .3s, color .3s, border-color .3s; }
+.go svg { width: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; transition: transform .3s var(--ease); }
+.work a:hover .go { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.work a:hover .go svg { transform: translateX(2px); }
+
+/* the newest site gets the first, wide row */
+.work.lead { grid-column: 1 / -1; }
+.work.lead a { display: grid; grid-template-columns: 7fr 4fr; gap: clamp(24px, 4vw, 64px); align-items: end; }
+.work.lead .txt { padding: 0 0 8px; }
+.work.lead h2 { font-size: clamp(30px, 3.4vw, 48px); line-height: 1.3; }
+.work.lead .sub { font-size: 16px; margin-bottom: 18px; }
+.work.lead .desc { -webkit-line-clamp: 4; font-size: 15px; }
+
+@media (max-width: 1100px) { .works { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 680px) {
+  .works { grid-template-columns: 1fr; }
+  .work.lead a { grid-template-columns: 1fr; gap: 0; }
+  .work.lead .txt { padding-top: 20px; }
+}
+footer { border-top: 1px solid var(--line); padding: 28px 0 40px; font-size: 13px; color: var(--ink-2); }
+footer code { font: inherit; color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { * { transition-duration: .01ms !important; } }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <p class="path"><code>D:\Work\html</code></p>
+  <h1>ホームページ制作</h1>
+  <p class="intro">これまでに作ったホームページ、9サイトの一覧です。新しいものから並んでいます。</p>
+</header>
+
+<main class="wrap">
+  <nav class="filters" aria-label="業種で絞り込む">
+      <button type="button" aria-pressed="true" data-f="">すべて<small>9</small></button>
+      <button type="button" aria-pressed="false" data-f="飲食店">飲食店<small>4</small></button>
+      <button type="button" aria-pressed="false" data-f="宿泊">宿泊<small>1</small></button>
+      <button type="button" aria-pressed="false" data-f="キャラクター">キャラクター<small>1</small></button>
+      <button type="button" aria-pressed="false" data-f="企業">企業<small>2</small></button>
+      <button type="button" aria-pressed="false" data-f="葬祭">葬祭<small>1</small></button>
+  </nav>
+  <ul class="works" id="works">
+      <li class="work lead" data-genre="飲食店" style="--c:#EDEFEC">
+        <a href="ramen-kohaku/index.html">
+          <figure class="pic"><img src="thumbs/ramen-kohaku.jpg" width="1200" height="750" alt="" loading="eager" decoding="async"></figure>
+          <div class="txt">
+            <p class="tag"><span class="no">09</span><span>飲食店</span></p>
+            <h2>中華そば 琥珀</h2>
+            <p class="sub">西麻布の醤油そば</p>
+            <p class="desc">西麻布、カウンター八席。丸鶏と昆布を十二時間かけて引いたスープと、毎朝打つ自家製麺の醤油そば。</p>
+            <p class="foot"><span>5ページ</span><code>ramen-kohaku/</code><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></p>
+          </div>
+        </a>
+      </li>
+      <li class="work" data-genre="飲食店" style="--c:#16244A">
+        <a href="sushi-gosu/index.html">
+          <figure class="pic"><img src="thumbs/sushi-gosu.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></figure>
+          <div class="txt">
+            <p class="tag"><span class="no">08</span><span>飲食店</span></p>
+            <h2>鮨 呉須</h2>
+            <p class="sub">日本橋の江戸前鮨</p>
+            <p class="desc">昭和三十七年、日本橋で創業。三代目が握る、江戸前の仕事を尽くした十五貫のおまかせ。鮨 呉須（ごす）。</p>
+            <p class="foot"><span>7ページ</span><code>sushi-gosu/</code><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></p>
+          </div>
+        </a>
+      </li>
+      <li class="work" data-genre="宿泊" style="--c:#1F2A26">
+        <a href="shijima/index.html">
+          <figure class="pic"><img src="thumbs/shijima.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></figure>
+          <div class="txt">
+            <p class="tag"><span class="no">07</span><span>宿泊</span></p>
+            <h2>湯宿 しじま</h2>
+            <p class="sub">木曽の渓谷の旅館</p>
+            <p class="desc">長野・木曽の渓谷に佇む、全八室の湯宿。聞こえるのは、川の音だけ。源泉かけ流しの湯と、木曽の山と川の恵みの会席を。</p>
+            <p class="foot"><span>1ページ</span><code>shijima/</code><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></p>
+          </div>
+        </a>
+      </li>
+      <li class="work" data-genre="キャラクター" style="--c:#FFF6E5">
+        <a href="nyanbei/index.html">
+          <figure class="pic"><img src="thumbs/nyanbei.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></figure>
+          <div class="txt">
+            <p class="tag"><span class="no">06</span><span>キャラクター</span></p>
+            <h2>にゃん兵衛</h2>
+            <p class="sub">LINEスタンプのキャラクターサイト</p>
+            <p class="desc">にゃん兵衛は、お酒とツッコミが大好きな黒猫のキャラクターです。LINEスタンプ「にゃん兵衛2」全40種を紹介しています。</p>
+            <p class="foot"><span>1ページ</span><code>nyanbei/</code><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></p>
+          </div>
+        </a>
+      </li>
+      <li class="work" data-genre="企業" style="--c:#0F2340">
+        <a href="rikka-fg/index.html">
+          <figure class="pic"><img src="thumbs/rikka-fg.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></figure>
+          <div class="txt">
+            <p class="tag"><span class="no">05</span><span>企業</span></p>
+            <h2>六花フィナンシャル・グループ</h2>
+            <p class="sub">銀行グループの企業情報ページ</p>
+            <p class="desc">六花フィナンシャル・グループの企業情報。パーパス、数字で見る六花、グループの強み、トップメッセージ、沿革をご紹介します。</p>
+            <p class="foot"><span>1ページ</span><code>rikka-fg/</code><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></p>
+          </div>
+        </a>
+      </li>
+      <li class="work" data-genre="企業" style="--c:#0A2A22">
+        <a href="kairo-inc/index.html">
+          <figure class="pic"><img src="thumbs/kairo-inc.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></figure>
+          <div class="txt">
+            <p class="tag"><span class="no">04</span><span>企業</span></p>
+            <h2>株式会社カイロ</h2>
+            <p class="sub">製造・物流のIT・IoT開発会社</p>
+            <p class="desc">株式会社カイロは、製造・物流の現場の設備とクラウドをつなぐ開発会社です。IoT、データ基盤、業務アプリ、クラウド運用まで一社で。</p>
+            <p class="foot"><span>1ページ</span><code>kairo-inc/</code><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></p>
+          </div>
+        </a>
+      </li>
+      <li class="work" data-genre="葬祭" style="--c:#2A2B2D">
+        <a href="nibiiro-sosai/index.html">
+          <figure class="pic"><img src="thumbs/nibiiro-sosai.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></figure>
+          <div class="txt">
+            <p class="tag"><span class="no">03</span><span>葬祭</span></p>
+            <h2>にびいろ葬祭</h2>
+            <p class="sub">世田谷の葬儀社</p>
+            <p class="desc">世田谷区経堂の葬儀社。家族葬・一日葬・火葬式・一般葬。24時間365日、お電話ひとつでお迎えに伺います。費用は事前にすべて書面でお伝えします。</p>
+            <p class="foot"><span>1ページ</span><code>nibiiro-sosai/</code><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></p>
+          </div>
+        </a>
+      </li>
+      <li class="work" data-genre="飲食店" style="--c:#151110">
+        <a href="yakiniku-oki/index.html">
+          <figure class="pic"><img src="thumbs/yakiniku-oki.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></figure>
+          <div class="txt">
+            <p class="tag"><span class="no">02</span><span>飲食店</span></p>
+            <h2>焼肉 燠</h2>
+            <p class="sub">西麻布の焼肉店</p>
+            <p class="desc">黒毛和牛の雌牛を一頭で仕入れ、紀州備長炭で焼く。西麻布、全席個室の焼肉店。</p>
+            <p class="foot"><span>1ページ</span><code>yakiniku-oki/</code><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></p>
+          </div>
+        </a>
+      </li>
+      <li class="work" data-genre="飲食店" style="--c:#1E1C19">
+        <a href="sushi-mio/index.html">
+          <figure class="pic"><img src="thumbs/sushi-mio.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></figure>
+          <div class="txt">
+            <p class="tag"><span class="no">01</span><span>飲食店</span></p>
+            <h2>鮨 澪</h2>
+            <p class="sub">銀座の鮨店</p>
+            <p class="desc">銀座七丁目、檜の一枚板に八席。赤酢のシャリで握る、おまかせ一本の鮨店。十七時半と二十時半の二部制。</p>
+            <p class="foot"><span>2ページ</span><code>sushi-mio/</code><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></p>
+          </div>
+        </a>
+      </li>
+  </ul>
+</main>
+
+<footer>
+  <div class="wrap">サイトを追加したら <code>python build_index.py</code> でこの一覧を作り直します。写真：各サイトのフッターに記載</div>
+</footer>
+
+<script>
+(() => {
+  const btns = [...document.querySelectorAll('.filters button')];
+  const works = [...document.querySelectorAll('.work')];
+  btns.forEach(b => b.addEventListener('click', () => {
+    const f = b.dataset.f;
+    btns.forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    works.forEach(w => (w.hidden = !!f && w.dataset.genre !== f));
+  }));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bowl" id="hero-bowl">
+      <canvas class="ring" id="ring" aria-hidden="true"></canvas>
+      <img class="soup-img" id="soup-img" src="{{HERO_SRC}}" crossorigin="anonymous" fetchpriority="high" decoding="async" alt="真上から見た醤油そば。澄んだ琥珀色のスープに、薄桃色のチャーシュー、味玉、メンマ、九条ねぎ。">
+      <canvas class="soup-gl" id="soup-gl" aria-hidden="true"></canvas>
+      <p class="bowl-hint" id="bowl-hint">スープの表面に、そっと触れてみてください。</p>
+    </div>
+    <div class="hero-text">
+      <h1 id="hero-title"><span>琥珀色の、</span><span>一杯。</span></h1>
+      <p class="sub">西麻布、カウンター八席。丸鶏と昆布を十二時間かけて引いたスープに、毎朝打つ麺を合わせます。</p>
+      <div class="ctas">
+        <a class="btn btn-solid" href="visit.html#reserve">席を予約する</a>
+        <a class="btn btn-line" href="ippai.html">一杯ができるまで</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro">
+    <div class="wrap intro-grid">
+      <div class="intro-text">
+        <h2 class="h2" data-in>スープは、<br>沸かしません。</h2>
+        <p data-in>丸鶏を八十五度で八時間。強い火で煮立てると、脂が溶けてスープが濁ります。濁らせないことだけを守ると、醤油の香りがまっすぐに立ちます。</p>
+        <p data-in>器の上に浮かぶ金色の粒は、鶏の脂で九条ねぎを揚げた香味油です。一杯ごとに、小さじ一杯だけ。</p>
+      </div>
+      <figure class="intro-photo" data-wipe>{{img:cup|(min-width: 900px) 40vw, 100vw}}</figure>
+    </div>
+  </section>
+
+  <section class="paths" aria-labelledby="paths-title">
+    <div class="wrap">
+      <h2 class="h2" id="paths-title" data-in>琥珀のこと</h2>
+      <div class="paths-grid">
+        <a class="path path-a" href="ippai.html" data-in>
+          <figure>{{img:tare|(min-width: 900px) 52vw, 100vw}}</figure>
+          <span class="t"><b>一杯ができるまで</b><span>タレ、スープ、香味油、麺、チャーシュー。器に入れる順に。</span></span>
+        </a>
+        <a class="path path-b" href="menu.html" data-in>
+          <figure>{{img:chashu|(min-width: 900px) 30vw, 100vw}}</figure>
+          <span class="t"><b>お品書き</b><span>券売機と同じ並びで、先に選んでおけます。</span></span>
+        </a>
+        <a class="path path-c" href="craft.html" data-in>
+          <figure>{{img:noodles|(min-width: 900px) 30vw, 100vw}}</figure>
+          <span class="t"><b>素材と人</b><span>鶏、醤油、昆布、小麦、豚、葱の産地。</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="day" aria-labelledby="day-title">
+    <div class="wrap">
+      <h2 class="h2" id="day-title" data-in>琥珀の一日</h2>
+      <p class="day-lead" data-in>夜明け前に火を入れたスープが、閉店までの十六時間を支えます。</p>
+      <ol class="day-line" id="day-line">
+        <li data-in><time>5:00</time><b>火を入れる</b><span>丸鶏と鶏ガラを寸胴へ。ここから八時間、八十五度を保ちます。</span></li>
+        <li data-in><time>7:00</time><b>麺を打つ</b><span>二日寝かせた生地を延ばし、切る。その日の分だけ。</span></li>
+        <li data-in><time>10:30</time><b>昆布を合わせる</b><span>前の晩から水に浸けた利尻昆布の出汁を、スープへ。</span></li>
+        <li data-in><time>11:00</time><b>昼の部</b><span>暖簾を出します。予約の方と、お並びの方を交互にご案内。</span></li>
+        <li data-in><time>18:00</time><b>夜の部</b><span>日本酒とつまみもご用意します。</span></li>
+        <li data-in><time>21:00</time><b>閉店</b><span>スープがなくなれば、それより早く閉めます。</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="visit-band">
+    {{RAIMON}}
+    <div class="wrap band-grid">
+      <div>
+        <h2 class="h2" data-in>席を予約する</h2>
+        <p data-in>昼の部・夜の部とも、各回の半分の席をウェブでご予約いただけます。二週間先まで。</p>
+      </div>
+      <dl class="hours" data-in>
+        <div><dt>昼の部</dt><dd>11:00〜15:00</dd></div>
+        <div><dt>夜の部</dt><dd>18:00〜21:00</dd></div>
+        <div><dt>定休日</dt><dd>火曜</dd></div>
+      </dl>
+      <a class="btn btn-solid" href="visit.html#reserve" data-in>空いている時間を見る</a>
+    </div>
+  </section>

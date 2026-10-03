@@ -1,0 +1,47 @@
+  <section class="kenbaiki-sec" aria-labelledby="km-title">
+    <div class="wrap km-grid">
+      <div class="km-intro">
+        <h2 class="h2" id="km-title">先に、選んでおく。</h2>
+        <p>ボタンを押すと、食券が出てきます。もう一度押すと、もう一枚。取り消すときは、出てきた食券を押してください。</p>
+        <p class="km-note">ここで選んだ内容は、この画面の中だけのものです。注文やお支払いは、店内で承ります。</p>
+      </div>
+
+      <div class="kenbaiki" id="kenbaiki">
+        <div class="km-top">
+          <span class="km-brand"><svg aria-hidden="true"><use href="#mark"/></svg>琥珀</span>
+          <output class="km-total" id="km-total" aria-live="polite"><small>合計</small><span id="km-sum">0</span><small>円</small></output>
+        </div>
+        <div class="km-buttons" id="km-buttons"></div>
+        <div class="km-bottom">
+          <button class="km-clear" type="button" id="km-clear" disabled>すべて取り消す</button>
+          <div class="km-slot" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="tray" aria-labelledby="tray-title">
+        <h3 id="tray-title" class="tray-title">出てきた食券 <span id="tray-count">0枚</span></h3>
+        <ul class="tickets" id="tickets" aria-live="polite"></ul>
+        <p class="tray-empty" id="tray-empty">まだ何も選ばれていません。左のボタンから、どうぞ。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-list">
+    <div class="wrap">
+      <h2 class="h2" data-in>すべての品書き</h2>
+      <p class="menu-lead" data-in>価格は税込です。麺の量は百四十グラム。大盛りは承っていません。</p>
+      <div class="mgroups">
+{{MENU_LIST}}
+      </div>
+    </div>
+  </section>
+
+  <section class="sake-band">
+    <div class="wrap sake-grid">
+      <figure data-wipe>{{img:sake|(min-width: 900px) 50vw, 100vw}}</figure>
+      <div>
+        <h2 class="h2" data-in>夜は、一合から。</h2>
+        <p data-in>夜の部では、月替わりの日本酒を三種ご用意します。炙りチャーシューや味玉を肴に一合、締めに醤油そばを。スープに負けない、辛口のものを選んでいます。</p>
+      </div>
+    </div>
+  </section>
