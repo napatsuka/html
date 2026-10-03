@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KAIRO | 現場とソフトウェアをつなぐ開発会社</title>
+<meta name="description" content="株式会社カイロは、製造・物流の現場の設備とクラウドをつなぐ開発会社です。IoT、データ基盤、業務アプリ、クラウド運用まで一社で。">
+<meta name="theme-color" content="#0A2A22">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KAIRO | 現場とソフトウェアをつなぐ開発会社">
+<meta property="og:description" content="製造・物流の現場の設備とクラウドをつなぐ開発会社。IoT、データ基盤、業務アプリ、クラウド運用まで。">
+<meta property="og:locale" content="ja_JP">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A2A22'/%3E%3Cpath d='M4 22h8l4-4h12' stroke='%23D08A57' stroke-width='2.4' fill='none'/%3E%3Ccircle cx='26' cy='18' r='3' fill='%23F2B27E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=M+PLUS+1:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+
+<header class="site-head">
+  <div class="head-inner">
+    <a class="logo" href="#top" aria-label="KAIRO トップへ"><i aria-hidden="true"></i>KAIRO</a>
+    <nav id="site-nav" aria-label="サイト内">
+      <a href="#services">事業</a>
+      <a href="#works">事例</a>
+      <a href="#process">進め方</a>
+      <a href="#careers">採用</a>
+      <a href="#company">会社概要</a>
+    </nav>
+    <a class="btn head-cta" href="#contact"><span>相談する</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">メニュー</button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-label="KAIRO">
+    <canvas id="board" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <p class="hero-tag">製造と物流のための開発会社</p>
+      <h1 data-chars><span class="line">現場と、</span><span class="line">ソフトウェアを</span><span class="line">結線する。</span></h1>
+      <p class="hero-sub">工場の設備や倉庫の端末からデータを集め、クラウドで使える形にし、現場で使う業務アプリにするまで。製造と物流の現場をつなぐシステムを、設計から運用まで一社でつくります。</p>
+      <div class="hero-actions">
+        <a class="btn" href="#contact"><span>開発の相談をする</span></a>
+        <a class="btn btn-ghost" href="#works"><span>事例を見る</span></a>
+      </div>
+    </div>
+    <p class="hero-meta" aria-hidden="true">SIGNALS <b id="sig-count">0</b><br>TRACES <b id="trace-count">0</b></p>
+    <span class="scroll-cue" aria-hidden="true"></span>
+  </section>
+
+  <div class="marquee" aria-label="対応している業種と技術">
+    <div class="marquee-track">
+      <ul>
+        <li><span class="jp">製造</span></li><li><span class="jp">物流</span></li><li><span class="jp">食品</span></li><li><span class="jp">化学</span></li><li><span class="jp">エネルギー</span></li>
+        <li>PLC</li><li>MQTT</li><li>OPC UA</li><li>AWS</li><li>Google Cloud</li><li>BigQuery</li><li>Kubernetes</li><li>TypeScript</li><li>Go</li><li>Rust</li>
+      </ul>
+      <ul aria-hidden="true">
+        <li><span class="jp">製造</span></li><li><span class="jp">物流</span></li><li><span class="jp">食品</span></li><li><span class="jp">化学</span></li><li><span class="jp">エネルギー</span></li>
+        <li>PLC</li><li>MQTT</li><li>OPC UA</li><li>AWS</li><li>Google Cloud</li><li>BigQuery</li><li>Kubernetes</li><li>TypeScript</li><li>Go</li><li>Rust</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="block board-bg" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 class="h2" data-split>設備から画面まで、<br>一本の回路で。</h2>
+        </div>
+        <p data-reveal>現場の機械に触れるところから、クラウドの運用まで。分けて発注すると生まれる「つなぎ目」の不具合を、私たちは引き受けます。</p>
+      </div>
+      <div class="chips">
+        <article class="chip" data-reveal>
+          <div class="chip-top">
+            <span class="chip-ref latin">U1</span>
+            <svg viewBox="0 0 88 44" aria-hidden="true"><path class="pin" d="M0 12h22M0 22h22M0 32h22M66 12h22M66 22h22M66 32h22"/><rect class="pkg" x="22" y="4" width="44" height="36"/><path class="sig" d="M0 22h22h44h22"/></svg>
+          </div>
+          <h3>現場IoT</h3>
+          <p class="en latin">EDGE &amp; IoT</p>
+          <p>工作機械のPLCや、後付けのセンサーからデータを集めます。古い設備でも、止めずにつなぐ方法を一緒に探します。</p>
+          <ul><li>PLC連携</li><li>エッジゲートウェイ</li><li>MQTT / OPC UA</li></ul>
+        </article>
+        <article class="chip" data-reveal style="--d:80ms">
+          <div class="chip-top">
+            <span class="chip-ref latin">U2</span>
+            <svg viewBox="0 0 88 44" aria-hidden="true"><path class="pin" d="M0 12h22M0 22h22M0 32h22M66 12h22M66 22h22M66 32h22"/><rect class="pkg" x="22" y="4" width="44" height="36"/><path class="sig" d="M0 12h22v20h44h22"/></svg>
+          </div>
+          <h3>データ基盤</h3>
+          <p class="en latin">DATA PLATFORM</p>
+          <p>集めたデータを貯めて整え、分析や帳票に使える形にします。現場の人がそのまま使えるダッシュボードまでつくります。</p>
+          <ul><li>BigQuery</li><li>データパイプライン</li><li>BI・ダッシュボード</li></ul>
+        </article>
+        <article class="chip" data-reveal>
+          <div class="chip-top">
+            <span class="chip-ref latin">U3</span>
+            <svg viewBox="0 0 88 44" aria-hidden="true"><path class="pin" d="M0 12h22M0 22h22M0 32h22M66 12h22M66 22h22M66 32h22"/><rect class="pkg" x="22" y="4" width="44" height="36"/><path class="sig" d="M0 32h22v-20h44h22"/></svg>
+          </div>
+          <h3>業務アプリ</h3>
+          <p class="en latin">BUSINESS APPS</p>
+          <p>生産管理、在庫、倉庫管理など、毎日使う業務システムをつくります。手袋をしたままでも押せる画面まで、現場で試して決めます。</p>
+          <ul><li>生産管理</li><li>倉庫管理（WMS）</li><li>ハンディ端末アプリ</li></ul>
+        </article>
+        <article class="chip" data-reveal style="--d:80ms">
+          <div class="chip-top">
+            <span class="chip-ref latin">U4</span>
+            <svg viewBox="0 0 88 44" aria-hidden="true"><path class="pin" d="M0 12h22M0 22h22M0 32h22M66 12h22M66 22h22M66 32h22"/><rect class="pkg" x="22" y="4" width="44" height="36"/><path class="sig" d="M0 22h22v10h44h22"/></svg>
+          </div>
+          <h3>クラウド運用</h3>
+          <p class="en latin">SRE &amp; OPERATIONS</p>
+          <p>つくったシステムを、24時間止まらないように見守ります。障害が起きたら、夜中でも私たちのエンジニアが対応します。</p>
+          <ul><li>AWS / Google Cloud</li><li>監視・障害対応</li><li>Kubernetes</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block status" id="status" aria-labelledby="status-title">
+    <div class="wrap status-grid">
+      <div>
+        <h2 class="h2" id="status-title" data-split>いまも、<br>動いている。</h2>
+        <p data-reveal>私たちが運用しているシステムは、いまこの瞬間も全国の工場と倉庫からデータを受け取っています。</p>
+      </div>
+      <div class="scope" data-reveal>
+        <div class="scope-bar"><b>正常に稼働中</b><span>受信したセンサー値（1秒あたり）</span></div>
+        <canvas id="scope" aria-hidden="true"></canvas>
+        <dl class="readouts">
+          <div><dt>運用中のシステム</dt><dd><span data-count="128">128</span><small>件</small></dd></div>
+          <div><dt>今月の稼働率</dt><dd>99.99<small>%</small></dd></div>
+          <div><dt>今日受け取ったデータ</dt><dd><span id="today-count">0</span><small>件</small></dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="wrap"><p class="scope-note">表示している数値は、このサイトのための見本です。</p></div>
+  </section>
+
+  <section class="works" id="works" aria-labelledby="works-title">
+    <div class="works-pin">
+      <div class="works-head">
+        <div>
+          <h2 class="h2" id="works-title" data-split>つないだ現場。</h2>
+        </div>
+        <div class="works-progress" aria-hidden="true"><span id="works-bar"></span></div>
+      </div>
+      <div class="works-track" id="works-track">
+        <article class="case">
+          <div class="case-body">
+            <p class="who">自動車部品メーカー　製造</p>
+            <h3>三つの工場、420台の設備の稼働を一つの画面に</h3>
+            <p>設備が止まっても、気づくのは巡回のとき。古いPLCを含む設備すべてにゲートウェイを付け、止まった瞬間に担当者のスマートフォンへ知らせる仕組みをつくりました。</p>
+            <dl>
+              <div><dt>停止に気づくまで</dt><dd>40→3<small>分</small></dd></div>
+              <div><dt>設備の稼働率</dt><dd>+12<small>pt</small></dd></div>
+            </dl>
+          </div>
+          <div class="case-fig">
+            <svg viewBox="0 0 400 300" role="img" aria-label="設備からゲートウェイ、クラウド、ダッシュボードへの構成図">
+              <path class="trace" d="M140,60 H320 V230 H140"/>
+              <path class="pulse" d="M140,60 H320 V230 H140"/>
+              <g class="node"><rect x="20" y="30" width="120" height="60"/><text x="80" y="58" text-anchor="middle">設備 420台</text><text class="sub" x="80" y="76" text-anchor="middle">PLC・センサー</text></g>
+              <g class="node"><rect x="260" y="30" width="120" height="60"/><text x="320" y="58" text-anchor="middle">ゲートウェイ</text><text class="sub" x="320" y="76" text-anchor="middle">OPC UA → MQTT</text></g>
+              <g class="node"><rect x="260" y="200" width="120" height="60"/><text x="320" y="228" text-anchor="middle">クラウド</text><text class="sub" x="320" y="246" text-anchor="middle">AWS IoT Core</text></g>
+              <g class="node"><rect x="20" y="200" width="120" height="60"/><text x="80" y="228" text-anchor="middle">現場の画面</text><text class="sub" x="80" y="246" text-anchor="middle">通知・ダッシュボード</text></g>
+            </svg>
+          </div>
+        </article>
+        <article class="case">
+          <div class="case-body">
+            <p class="who">物流会社　倉庫</p>
+            <h3>1日6万件の出荷を支える、倉庫管理システムの入れ替え</h3>
+            <p>二十年使ったシステムを、倉庫を一日も止めずに新しくしました。ハンディ端末の画面は、作業者の方と一緒に二十回以上つくり直しています。</p>
+            <dl>
+              <div><dt>出荷ミス</dt><dd>1/8<small>に</small></dd></div>
+              <div><dt>新人が独り立ちするまで</dt><dd>5→2<small>日</small></dd></div>
+            </dl>
+          </div>
+          <div class="case-fig">
+            <svg viewBox="0 0 400 300" role="img" aria-label="ハンディ端末から倉庫管理システム、基幹システム、出荷ラベルへの構成図">
+              <path class="trace" d="M140,60 H320 V230 H140"/>
+              <path class="pulse" d="M140,60 H320 V230 H140"/>
+              <g class="node"><rect x="20" y="30" width="120" height="60"/><text x="80" y="58" text-anchor="middle">ハンディ端末</text><text class="sub" x="80" y="76" text-anchor="middle">180台</text></g>
+              <g class="node"><rect x="260" y="30" width="120" height="60"/><text x="320" y="58" text-anchor="middle">倉庫管理</text><text class="sub" x="320" y="76" text-anchor="middle">Go / PostgreSQL</text></g>
+              <g class="node"><rect x="260" y="200" width="120" height="60"/><text x="320" y="228" text-anchor="middle">基幹システム</text><text class="sub" x="320" y="246" text-anchor="middle">受注・在庫の連携</text></g>
+              <g class="node"><rect x="20" y="200" width="120" height="60"/><text x="80" y="228" text-anchor="middle">出荷ラベル</text><text class="sub" x="80" y="246" text-anchor="middle">運送会社ごとに自動</text></g>
+            </svg>
+          </div>
+        </article>
+        <article class="case">
+          <div class="case-body">
+            <p class="who">食品メーカー　品質管理</p>
+            <h3>手書きだった温度記録を、すべて自動に</h3>
+            <p>冷蔵庫と製造ラインの64か所にセンサーを置き、温度を自動で記録します。基準を外れたら、すぐに担当者へ知らせます。監査用の帳票も自動でつくられます。</p>
+            <dl>
+              <div><dt>記録にかかる時間</dt><dd>-1万<small>時間/年</small></dd></div>
+              <div><dt>記録の抜け</dt><dd>0<small>件</small></dd></div>
+            </dl>
+          </div>
+          <div class="case-fig">
+            <svg viewBox="0 0 400 300" role="img" aria-label="温度センサーからLTEゲートウェイ、記録とアラート、帳票への構成図">
+              <path class="trace" d="M140,60 H320 V230 H140"/>
+              <path class="pulse" d="M140,60 H320 V230 H140"/>
+              <g class="node"><rect x="20" y="30" width="120" height="60"/><text x="80" y="58" text-anchor="middle">温度センサー</text><text class="sub" x="80" y="76" text-anchor="middle">64か所</text></g>
+              <g class="node"><rect x="260" y="30" width="120" height="60"/><text x="320" y="58" text-anchor="middle">LTE ゲートウェイ</text><text class="sub" x="320" y="76" text-anchor="middle">停電時も記録</text></g>
+              <g class="node"><rect x="260" y="200" width="120" height="60"/><text x="320" y="228" text-anchor="middle">記録・アラート</text><text class="sub" x="320" y="246" text-anchor="middle">Google Cloud</text></g>
+              <g class="node"><rect x="20" y="200" width="120" height="60"/><text x="80" y="228" text-anchor="middle">監査用の帳票</text><text class="sub" x="80" y="246" text-anchor="middle">PDFで自動作成</text></g>
+            </svg>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block board-bg" id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 class="h2" data-split>まず、<br>現場に行く。</h2>
+        </div>
+        <p data-reveal>大きな仕様書から始めるより、小さく動くものを早く現場に置くほうが、正しいシステムにたどり着けると考えています。</p>
+      </div>
+      <div class="steps-wrap" id="steps">
+      <span class="bus" aria-hidden="true"></span>
+      <ol class="steps">
+        <li><div class="pad">1</div><h3>現場を見る</h3><p class="term">1〜2週間</p><p>エンジニアが工場や倉庫に行き、設備と作業を自分の目で確かめます。</p></li>
+        <li><div class="pad">2</div><h3>小さくつくる</h3><p class="term">4週間</p><p>いちばん困っている一か所だけを、実際に動く形でつくって試します。</p></li>
+        <li><div class="pad">3</div><h3>広げる</h3><p class="term">3〜6か月</p><p>効果を確かめてから、ほかのラインや拠点へ同じ仕組みを広げます。</p></li>
+        <li><div class="pad">4</div><h3>運用し続ける</h3><p class="term">ずっと</p><p>つくったチームがそのまま運用し、使われ方を見て改善を続けます。</p></li>
+      </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="block careers" id="careers">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 class="h2" data-split>一緒に、<br>配線しませんか。</h2>
+        </div>
+        <p data-reveal>エンジニアの多くが、製造や物流の現場の出身です。コードと同じくらい、現場の話が好きな人を探しています。</p>
+      </div>
+      <div class="roles">
+        <a class="role" href="#contact" data-role="バックエンドエンジニア"><h3>バックエンドエンジニア</h3><span class="stack">Go / TypeScript / PostgreSQL</span><span class="pay">¥6.5M–11M</span><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+        <a class="role" href="#contact" data-role="組込み・IoTエンジニア"><h3>組込み・IoTエンジニア</h3><span class="stack">Rust / C / PLC / MQTT</span><span class="pay">¥6.5M–11M</span><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+        <a class="role" href="#contact" data-role="SRE"><h3>SRE</h3><span class="stack">AWS / Google Cloud / Kubernetes</span><span class="pay">¥7M–12M</span><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+        <a class="role" href="#contact" data-role="データエンジニア"><h3>データエンジニア</h3><span class="stack">BigQuery / dbt / Python</span><span class="pay">¥6.5M–11M</span><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+        <a class="role" href="#contact" data-role="プロジェクトマネージャー"><h3>プロジェクトマネージャー</h3><span class="stack">製造・物流での経験がある方</span><span class="pay">¥8M–13M</span><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+      </div>
+      <p class="careers-note">リモートと出社を組み合わせた働き方です。現場に行く日は、交通費と宿泊費を会社が出します。</p>
+    </div>
+  </section>
+
+  <section class="block board-bg" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <h2 class="h2" data-split>話を、<br>聞かせてください。</h2>
+        <p data-reveal>まだ要件が決まっていなくても大丈夫です。困っている現場の話をうかがうところから始めます。</p>
+        <div class="direct" data-reveal>
+          <a href="mailto:hello@kairo.example"><small>メール</small><b>hello@kairo.example</b></a>
+          <a href="tel:0300000000"><small>電話（平日10時〜18時）</small><b>03-0000-0000</b></a>
+        </div>
+      </div>
+      <div>
+        <form class="cform" id="contact-form" novalidate data-reveal>
+          <fieldset>
+            <legend>ご用件</legend>
+            <div class="seg">
+              <label><input type="radio" name="topic" value="開発のご相談" checked>開発のご相談</label>
+              <label><input type="radio" name="topic" value="採用への応募">採用への応募</label>
+              <label><input type="radio" name="topic" value="取材・その他">取材・その他</label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="f-company">会社名</label>
+            <input id="f-company" name="company" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="f-name">お名前<span class="req">必須</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="name-err">
+            <p class="err" id="name-err"></p>
+          </div>
+          <div class="field full">
+            <label for="f-email">メールアドレス<span class="req">必須</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="email-err">
+            <p class="err" id="email-err"></p>
+          </div>
+          <div class="field full">
+            <label for="f-message" id="message-label">ご相談の内容<span class="req">必須</span></label>
+            <textarea id="f-message" name="message" rows="5" required aria-describedby="message-err" placeholder="例：工場の設備の稼働状況を、紙ではなく画面で見られるようにしたい。"></textarea>
+            <p class="err" id="message-err"></p>
+          </div>
+          <div class="submit-row">
+            <button class="btn" type="submit"><span>送信する</span></button>
+            <p class="form-note" id="form-status" aria-live="polite">二営業日以内に、エンジニアからお返事します。</p>
+          </div>
+        </form>
+        <div class="done" id="contact-done" hidden>
+          <h3 tabindex="-1">送信しました</h3>
+          <p>二営業日以内に、エンジニアからメールでお返事します。</p>
+          <dl></dl>
+          <button class="btn btn-ghost" type="button" data-reset><span>別の内容を送る</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block company" id="company" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="h2" data-split style="margin-bottom:48px">会社概要</h2>
+      <dl data-reveal>
+        <dt>会社名</dt><dd>株式会社カイロ（KAIRO Inc.）</dd>
+        <dt>設立</dt><dd>2014年4月</dd>
+        <dt>所在地</dt><dd>東京都品川区大崎二丁目〇-〇 〇〇ビル 8階</dd>
+        <dt>社員数</dt><dd>86名（うちエンジニア 71名）</dd>
+        <dt>事業内容</dt><dd>製造業・物流業向けのIoTシステム、データ基盤、業務アプリケーションの開発と運用</dd>
+        <dt>認証</dt><dd>ISO/IEC 27001（情報セキュリティ）</dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p class="f-word" aria-hidden="true">KAIRO</p>
+  <div class="f-row">
+    <span>&copy; 2026 KAIRO Inc.</span>
+    <nav aria-label="フッター">
+      <a href="#services">事業</a><a href="#works">事例</a><a href="#process">進め方</a><a href="#careers">採用</a><a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/board.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
