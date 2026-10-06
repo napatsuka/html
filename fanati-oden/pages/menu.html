@@ -1,0 +1,92 @@
+  <section class="page-head">
+    <div class="wrap">
+      <ol class="crumbs"><li><a href="index.html">トップ</a></li><li aria-current="page">メニュー</li></ol>
+      <h1 class="page-title"><span class="hand">お品書き</span>メニュー</h1>
+      <p class="page-lead">おでんは盛り合わせ以外、どれも一品300円。鍋の具をタップしてお椀に取ると、合計がわかります。</p>
+    </div>
+  </section>
+
+  <section class="pot-sec" aria-labelledby="pot-title">
+    <div class="wrap pot-grid">
+      <div class="pot-wrap">
+        <h2 class="sr-only" id="pot-title">おでん鍋</h2>
+        <div class="pot" id="pot">
+          <canvas class="steam" id="steam" aria-hidden="true"></canvas>
+          <div class="cells" id="cells" role="group" aria-label="おでんの具。押すとお椀に入ります"></div>
+        </div>
+        <p class="pot-note">注文は店内で承ります。ここで選んだ内容は、この画面の中だけのものです。</p>
+      </div>
+
+      <aside class="bowl-card" aria-labelledby="bowl-title">
+        <h2 class="bowl-title" id="bowl-title">あなたのお椀</h2>
+        <div class="bowl" id="bowl" aria-live="polite">
+          <p class="bowl-empty" id="bowl-empty">鍋の具を押すと、ここに入ります。</p>
+          <ul class="picked" id="picked"></ul>
+        </div>
+        <p class="bowl-sum"><span id="b-count">0品</span><b><span id="b-total">0</span>円</b></p>
+        <p class="bowl-tip" id="bowl-tip">五品えらぶと、盛り合わせ（1,200円）でお得に。</p>
+        <button class="btn btn-line" type="button" id="b-clear" disabled>お椀を空にする</button>
+      </aside>
+    </div>
+  </section>
+
+  <div class="floral" aria-hidden="true"></div>
+
+  <section class="dishes" aria-labelledby="dishes-title">
+    <div class="wrap dishes-grid">
+      <figure data-wipe>{{img:gyoza|(min-width: 900px) 44vw, 100vw}}</figure>
+      <div>
+        <h2 class="h2" id="dishes-title" data-in>おでんのほかに、<br>逸品も。</h2>
+        <ul class="mlist" data-in>
+          <li><b>肉汁焼き餃子</b><span class="p">600円</span></li>
+          <li><b>ねぎとろ</b><span class="p">300円</span></li>
+          <li><b>焼きおにぎり</b><span class="p">300円</span></li>
+          <li><b>毛沢東ポテサラ</b><span class="p">300円</span></li>
+          <li><b>豚と水菜とごま油</b><span class="p">店頭で</span></li>
+          <li><b>炭焼鶏ハラミ</b><span class="p">店頭で</span></li>
+          <li><b>肉吸いうどん</b><span class="p">店頭で</span></li>
+          <li><b>おばんざい各種</b><span class="p">店頭で</span></li>
+          <li><b>大将・女将の本日のおすすめ</b><span class="p">時価</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="plays" aria-labelledby="plays-title">
+    <div class="wrap">
+      <h2 class="h2" id="plays-title" data-in>歌って、くゆらせて。</h2>
+      <div class="plays-grid">
+        <div class="play" data-in>
+          <h3>カラオケ</h3>
+          <p class="big">無料</p>
+          <p>ボックス席の画面で、歌い放題です。</p>
+        </div>
+        <div class="play" data-in>
+          <h3>シーシャ</h3>
+          <p class="big">2,500<small>円／一台</small></p>
+          <p>トップ替え 1,500円</p>
+        </div>
+        <div class="play" data-in>
+          <h3>ボトル</h3>
+          <p class="big">1,500<small>円</small></p>
+          <p>アルコールボトル。ジュースボトルは500円。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="drinks" aria-labelledby="drinks-title">
+    <div class="wrap drinks-grid">
+      <div>
+        <h2 class="h2" id="drinks-title" data-in>二百種類以上が、<br>飲み放題。</h2>
+        <p class="note" data-in>飲み放題の料金は、店頭でご案内します。</p>
+      </div>
+      <ul class="tags" data-in>
+        <li>生ビール</li><li>サワー</li><li>ハイボール</li><li>二階堂（麦）</li><li>黒霧島（芋）</li><li>鍛高譚（紫蘇）</li><li>茉莉花（ジャスミン）</li><li>梅酒</li><li>果実酒</li><li>ワイン 赤・白</li><li>日本酒</li><li>カクテル</li><li>ソフトドリンク</li>
+      </ul>
+    </div>
+  </section>
+
+  <nav class="next-page" aria-label="次のページ">
+    <a class="wrap" href="access.html"><small>次は</small><b>店舗案内</b><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a>
+  </nav>

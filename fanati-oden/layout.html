@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESC}}">
+<meta name="theme-color" content="#16132E">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESC}}">
+<meta property="og:image" content="images/interior-bar.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%2316132E'/%3E%3Cpath d='M20 4v32' stroke='%23F7EFE3' stroke-width='2'/%3E%3Cpath d='M20 7l7 11H13z' fill='%23F3B33D'/%3E%3Ccircle cx='20' cy='23' r='5' fill='%23FF3D5A'/%3E%3Crect x='15' y='29' width='10' height='6' rx='1' fill='%23F8A9C8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Yusei+Magic&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v={{V}}">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarOrPub",
+  "name": "{{SHOP_NAME}}",
+  "alternateName": "{{SHOP_CONCEPT}}",
+  "servesCuisine": ["おでん", "居酒屋"],
+  "priceRange": "¥2,000〜¥3,000",
+  "address": { "@type": "PostalAddress", "streetAddress": "堂山町2-2 エビスビル3F", "addressLocality": "大阪市北区", "addressRegion": "大阪府", "addressCountry": "JP" },
+  "openingHours": "Mo-Su 17:00-05:00"
+}
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="kushi" viewBox="0 0 40 40">
+    <path d="M20 2v36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M20 6l7.5 11.5h-15z" fill="var(--k1, #F3B33D)"/>
+    <circle cx="20" cy="23.5" r="5.2" fill="var(--k2, #FF3D5A)"/>
+    <rect x="14.5" y="30" width="11" height="6.5" rx="1.2" fill="var(--k3, #F8A9C8)"/>
+  </symbol>
+</svg>
+
+<a class="skip" href="#main">本文へ移動</a>
+
+<header class="site-head" id="head">
+  <div class="head-inner">
+    <a class="logo" href="index.html" aria-label="ファナティーおでん トップへ"><svg aria-hidden="true"><use href="#kushi"/></svg><span><small>ファナティー</small><b>おでん</b></span></a>
+    <nav class="gnav" id="gnav" aria-label="サイト内">
+      {{NAV}}
+    </nav>
+    <p class="open-now" id="open-now" aria-live="polite"></p>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="gnav"><span class="bars" aria-hidden="true"></span><span class="t">メニュー</span></button>
+  </div>
+</header>
+
+<main id="main" class="page-{{SLUG}}">
+{{BODY}}
+</main>
+
+<footer class="site-foot">
+  <div class="floral" aria-hidden="true"></div>
+  <div class="wrap f-main">
+    <div>
+      <a class="f-logo" href="index.html"><svg aria-hidden="true"><use href="#kushi"/></svg><b>ファナティーおでん</b></a>
+      <p class="f-concept">{{SHOP_CONCEPT}}</p>
+    </div>
+    <address>{{SHOP_ADDRESS}}<br>{{SHOP_HOURS}}　{{SHOP_HOLIDAY}}　{{SHOP_SEATS}}</address>
+    <nav aria-label="フッター">{{FNAV}}<a href="https://shortcut-inc.com/area/umeda/" target="_blank" rel="noopener">梅田の系列店</a></nav>
+  </div>
+  <div class="wrap"><small class="f-note">20歳未満の方への酒類の提供はいたしません。写真の一部はイメージです（Unsplash より {{CREDITS}}）。</small></div>
+</footer>
+
+{{SCRIPTS}}<script src="js/main.js?v={{V}}"></script>
+</body>
+</html>

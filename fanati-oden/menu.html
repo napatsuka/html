@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>メニュー｜ファナティーおでん</title>
+<meta name="description" content="おでんは一品300円、五種盛り合わせは1,200円。肉汁焼き餃子などの逸品、200種類以上の飲み放題、カラオケとシーシャ。">
+<meta name="theme-color" content="#16132E">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="メニュー｜ファナティーおでん">
+<meta property="og:description" content="おでんは一品300円、五種盛り合わせは1,200円。肉汁焼き餃子などの逸品、200種類以上の飲み放題、カラオケとシーシャ。">
+<meta property="og:image" content="images/interior-bar.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%2316132E'/%3E%3Cpath d='M20 4v32' stroke='%23F7EFE3' stroke-width='2'/%3E%3Cpath d='M20 7l7 11H13z' fill='%23F3B33D'/%3E%3Ccircle cx='20' cy='23' r='5' fill='%23FF3D5A'/%3E%3Crect x='15' y='29' width='10' height='6' rx='1' fill='%23F8A9C8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Yusei+Magic&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=1791271010">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarOrPub",
+  "name": "ファナティーおでん",
+  "alternateName": "おでんとカラオケ ときどきシーシャ",
+  "servesCuisine": ["おでん", "居酒屋"],
+  "priceRange": "¥2,000〜¥3,000",
+  "address": { "@type": "PostalAddress", "streetAddress": "堂山町2-2 エビスビル3F", "addressLocality": "大阪市北区", "addressRegion": "大阪府", "addressCountry": "JP" },
+  "openingHours": "Mo-Su 17:00-05:00"
+}
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="kushi" viewBox="0 0 40 40">
+    <path d="M20 2v36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M20 6l7.5 11.5h-15z" fill="var(--k1, #F3B33D)"/>
+    <circle cx="20" cy="23.5" r="5.2" fill="var(--k2, #FF3D5A)"/>
+    <rect x="14.5" y="30" width="11" height="6.5" rx="1.2" fill="var(--k3, #F8A9C8)"/>
+  </symbol>
+</svg>
+
+<a class="skip" href="#main">本文へ移動</a>
+
+<header class="site-head" id="head">
+  <div class="head-inner">
+    <a class="logo" href="index.html" aria-label="ファナティーおでん トップへ"><svg aria-hidden="true"><use href="#kushi"/></svg><span><small>ファナティー</small><b>おでん</b></span></a>
+    <nav class="gnav" id="gnav" aria-label="サイト内">
+      <a href="menu.html" aria-current="page">メニュー</a>
+      <a href="access.html">店舗案内</a>
+    </nav>
+    <p class="open-now" id="open-now" aria-live="polite"></p>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="gnav"><span class="bars" aria-hidden="true"></span><span class="t">メニュー</span></button>
+  </div>
+</header>
+
+<main id="main" class="page-menu">
+  <section class="page-head">
+    <div class="wrap">
+      <ol class="crumbs"><li><a href="index.html">トップ</a></li><li aria-current="page">メニュー</li></ol>
+      <h1 class="page-title"><span class="hand">お品書き</span>メニュー</h1>
+      <p class="page-lead">おでんは盛り合わせ以外、どれも一品300円。鍋の具をタップしてお椀に取ると、合計がわかります。</p>
+    </div>
+  </section>
+
+  <section class="pot-sec" aria-labelledby="pot-title">
+    <div class="wrap pot-grid">
+      <div class="pot-wrap">
+        <h2 class="sr-only" id="pot-title">おでん鍋</h2>
+        <div class="pot" id="pot">
+          <canvas class="steam" id="steam" aria-hidden="true"></canvas>
+          <div class="cells" id="cells" role="group" aria-label="おでんの具。押すとお椀に入ります"></div>
+        </div>
+        <p class="pot-note">注文は店内で承ります。ここで選んだ内容は、この画面の中だけのものです。</p>
+      </div>
+
+      <aside class="bowl-card" aria-labelledby="bowl-title">
+        <h2 class="bowl-title" id="bowl-title">あなたのお椀</h2>
+        <div class="bowl" id="bowl" aria-live="polite">
+          <p class="bowl-empty" id="bowl-empty">鍋の具を押すと、ここに入ります。</p>
+          <ul class="picked" id="picked"></ul>
+        </div>
+        <p class="bowl-sum"><span id="b-count">0品</span><b><span id="b-total">0</span>円</b></p>
+        <p class="bowl-tip" id="bowl-tip">五品えらぶと、盛り合わせ（1,200円）でお得に。</p>
+        <button class="btn btn-line" type="button" id="b-clear" disabled>お椀を空にする</button>
+      </aside>
+    </div>
+  </section>
+
+  <div class="floral" aria-hidden="true"></div>
+
+  <section class="dishes" aria-labelledby="dishes-title">
+    <div class="wrap dishes-grid">
+      <figure data-wipe><img src="https://images.unsplash.com/photo-1738681336104-608b4e7dc3b0?auto=format&fit=crop&q=78&w=1600" srcset="https://images.unsplash.com/photo-1738681336104-608b4e7dc3b0?auto=format&fit=crop&q=78&w=640 640w, https://images.unsplash.com/photo-1738681336104-608b4e7dc3b0?auto=format&fit=crop&q=78&w=1000 1000w, https://images.unsplash.com/photo-1738681336104-608b4e7dc3b0?auto=format&fit=crop&q=78&w=1600 1600w, https://images.unsplash.com/photo-1738681336104-608b4e7dc3b0?auto=format&fit=crop&q=78&w=2400 2400w" sizes="(min-width: 900px) 44vw, 100vw" width="5184" height="3456" alt="黒い皿に並んだ焼き餃子（写真はイメージです）" loading="lazy" decoding="async"></figure>
+      <div>
+        <h2 class="h2" id="dishes-title" data-in>おでんのほかに、<br>逸品も。</h2>
+        <ul class="mlist" data-in>
+          <li><b>肉汁焼き餃子</b><span class="p">600円</span></li>
+          <li><b>ねぎとろ</b><span class="p">300円</span></li>
+          <li><b>焼きおにぎり</b><span class="p">300円</span></li>
+          <li><b>毛沢東ポテサラ</b><span class="p">300円</span></li>
+          <li><b>豚と水菜とごま油</b><span class="p">店頭で</span></li>
+          <li><b>炭焼鶏ハラミ</b><span class="p">店頭で</span></li>
+          <li><b>肉吸いうどん</b><span class="p">店頭で</span></li>
+          <li><b>おばんざい各種</b><span class="p">店頭で</span></li>
+          <li><b>大将・女将の本日のおすすめ</b><span class="p">時価</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="plays" aria-labelledby="plays-title">
+    <div class="wrap">
+      <h2 class="h2" id="plays-title" data-in>歌って、くゆらせて。</h2>
+      <div class="plays-grid">
+        <div class="play" data-in>
+          <h3>カラオケ</h3>
+          <p class="big">無料</p>
+          <p>ボックス席の画面で、歌い放題です。</p>
+        </div>
+        <div class="play" data-in>
+          <h3>シーシャ</h3>
+          <p class="big">2,500<small>円／一台</small></p>
+          <p>トップ替え 1,500円</p>
+        </div>
+        <div class="play" data-in>
+          <h3>ボトル</h3>
+          <p class="big">1,500<small>円</small></p>
+          <p>アルコールボトル。ジュースボトルは500円。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="drinks" aria-labelledby="drinks-title">
+    <div class="wrap drinks-grid">
+      <div>
+        <h2 class="h2" id="drinks-title" data-in>二百種類以上が、<br>飲み放題。</h2>
+        <p class="note" data-in>飲み放題の料金は、店頭でご案内します。</p>
+      </div>
+      <ul class="tags" data-in>
+        <li>生ビール</li><li>サワー</li><li>ハイボール</li><li>二階堂（麦）</li><li>黒霧島（芋）</li><li>鍛高譚（紫蘇）</li><li>茉莉花（ジャスミン）</li><li>梅酒</li><li>果実酒</li><li>ワイン 赤・白</li><li>日本酒</li><li>カクテル</li><li>ソフトドリンク</li>
+      </ul>
+    </div>
+  </section>
+
+  <nav class="next-page" aria-label="次のページ">
+    <a class="wrap" href="access.html"><small>次は</small><b>店舗案内</b><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a>
+  </nav>
+
+</main>
+
+<footer class="site-foot">
+  <div class="floral" aria-hidden="true"></div>
+  <div class="wrap f-main">
+    <div>
+      <a class="f-logo" href="index.html"><svg aria-hidden="true"><use href="#kushi"/></svg><b>ファナティーおでん</b></a>
+      <p class="f-concept">おでんとカラオケ ときどきシーシャ</p>
+    </div>
+    <address>大阪府大阪市北区堂山町2-2 エビスビル3F<br>17:00〜29:00　無休　60席</address>
+    <nav aria-label="フッター"><a href="index.html">トップ</a><a href="menu.html" aria-current="page">メニュー</a><a href="access.html">店舗案内</a><a href="https://shortcut-inc.com/area/umeda/" target="_blank" rel="noopener">梅田の系列店</a></nav>
+  </div>
+  <div class="wrap"><small class="f-note">20歳未満の方への酒類の提供はいたしません。写真の一部はイメージです（Unsplash より Awesome Sauce Creative、Bogomil Mihaylov、Mikey Frost）。</small></div>
+</footer>
+
+<script>window.ODEN = {"items": ["大根", "たまご", "厚揚げ", "こんにゃく", "ちくわ", "もちきんちゃく", "はんぺん", "ロールキャベツ", "たこ焼き", "がんも", "つくね", "牛すじ", "ウィンナー", "えびまよ"], "price": 300, "mori": {"n": 5, "price": 1200}};</script>
+<script src="js/main.js?v=1791271010"></script>
+</body>
+</html>
